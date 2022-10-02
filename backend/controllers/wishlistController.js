@@ -1,5 +1,4 @@
 
-const wishlist = require('../models/wishlist');
 const Wishlist = require('../models/wishlist');
 
 exports.createWishlist = (req, res, next) => {
@@ -18,4 +17,10 @@ exports.findAllWishlist = (req, res, next) => {
     Wishlist.find()
         .then(wishlist => res.status(200).json(wishlist))
         .catch(error => res.status(400).json({error}))
+}
+
+exports.findOneWishlist = (req, res, next) => {
+    Wishlist.findOne({_id: req.params.id})
+        .then(wish => res.status(200).json(wish))
+        .catch(error => res.status(400).json({error}));
 }

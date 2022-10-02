@@ -5,7 +5,9 @@ const wishlistCtrl = require('../controllers/wishlistController');
 
 
 router.get('/',wishlistCtrl.findAllWishlist);
+router.get('/:id',wishlistCtrl.findOneWishlist);
 router.post('/', wishlistCtrl.createWishlist);
+
 
 
 
