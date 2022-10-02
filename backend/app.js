@@ -1,5 +1,5 @@
 const express = require('express');
-
+const wishlistRoutes = require('./routes/wishlist');
 const app = express();
 const connectDb = require('./config/db');
 
@@ -7,8 +7,7 @@ const connectDb = require('./config/db');
 connectDb();
 app.use(express.json());
 
-app.use((req,res)=> {
-    res.json({message : 'Votre requete a bien été recuee'});
-})
+
+app.use('/wishlist', wishlistRoutes);
 
 module.exports = app;
