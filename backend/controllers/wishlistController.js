@@ -31,3 +31,9 @@ exports.modifyOneWish = (req, res, next) => {
       .then(() => res.status(200).json({ message: 'Le wish a bien été modifié !'}))
       .catch(error => res.status(400).json({ error }));
   };
+
+exports.deleteOneWish = (req,res, next) => {
+    Wishlist.deleteOne({_id:req.params.id})
+        .then(() => res.status(200).json({message: 'Le wish a bien été supprimé'}))
+        .catch(error => res.status(400).json({error}))
+}
