@@ -24,3 +24,10 @@ exports.findOneWishlist = (req, res, next) => {
         .then(wish => res.status(200).json(wish))
         .catch(error => res.status(400).json({error}));
 }
+
+exports.modifyOneWish = (req, res, next) => {
+    Wishlist.updateOne({ _id: req.params.id }, 
+        { ...req.body, _id: req.params.id })
+      .then(() => res.status(200).json({ message: 'Le wish a bien été modifié !'}))
+      .catch(error => res.status(400).json({ error }));
+  };
