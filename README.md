@@ -7,7 +7,7 @@
 
   <p align="center">
     Application de gerer une liste d'achat, d'articles vues sur internet tout en conservant le lien de cet article. 
-    L'application a été réaliser sous MERN Stack (MongoDB, React, NODE JS, & EXPRESS)
+    L'application a été réalisée sous MERN Stack (MongoDB, React, NODE JS, & EXPRESS)
     <br />
     <br />
     <br />
