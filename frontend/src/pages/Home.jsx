@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useEffect } from 'react';
-
+import Button from 'react-bootstrap/Button';
 import WishlistLayout from '../features/wishlist/layouts/WishlistLayout';
 import { addWishService, deleteWishService, getWishlistService, modifyWishService } from '../services/wishlistService';
 import '../App.css';
@@ -37,7 +37,7 @@ const Home = () => {
             
             <div className="home">
                 <div>
-                    <button type="button" ref={buttonOpen}>Ajouter un nouveau wish</button>
+                    <Button ref={buttonOpen}  variant="dark" className="mt-3">Ajouter un wish</Button>
                 </div>
                 <div id="personModal" ref={modalElement}>
                     <Modal addWish={addWish} buttonOpen={buttonOpen} modalElement={modalElement} />

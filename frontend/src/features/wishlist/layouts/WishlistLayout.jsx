@@ -9,7 +9,6 @@ const WishlistLayout = ({ wishlist, deleteWish, editWish}) => {
     
     return (
         <div className="wishlist">
-            <h2>liste wish</h2>
             {wishlist && wishlist.map(wish => (
                 <DisplayWish editWish={editWish} wish={wish} key={wish._id} handleDelete={handleDelete}/>
             )
