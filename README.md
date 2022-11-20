@@ -20,4 +20,31 @@
 ![Design preview for the website](./Desktop.png)
 
 
-# Getting Started BackEnd 
+# Getting Started  
+
+## BackEnd
+```
+# Creer un fichier .env pour ajouter l'adresse de la base de données MONGODB
+MONGO_DATABASE='L'adresse de la base de données'
+```
+
+### Installation des dépendances & lancement du serveur
+
+``` 
+npm install
+npm start
+
+```
+
+## Frontend
+
+### Installation des dépendances & lancement du serveur
+
+```
+npm install
+npm start
+```
+
+
+
+
